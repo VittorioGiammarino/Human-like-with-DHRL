@@ -1,4 +1,4 @@
-# SurpassingHumans_withDHRL
+# Human-Like_withDHRL
 
 Code for the paper "Human-like Performance on a Foraging Task with Deep Hierarchical Reinforcement Learning using Human Priors"
 
