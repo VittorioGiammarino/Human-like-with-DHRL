@@ -1,9 +1,6 @@
 # SurpassingHumans_withDHRL
 
-Code for the paper "Surpassing Human Performance on a Foraging Task with Deep Hierarchical Reinforcement Learning using Human Priors"
-Download the zip with data and pretrained models here:
-https://figshare.com/s/6b4ab468d85c9c77fddd
-save and extract in SurpassingHumans_withDHRL/
+Code for the paper "Human-like Performance on a Foraging Task with Deep Hierarchical Reinforcement Learning using Human Priors"
 
 ### Dependencies
 ```python 
@@ -14,21 +11,23 @@ tensorflow 2.2.0
 scikit-learn 0.23.1
 ```
 
-## GenerateFigures
-run GenerateFigures to generate the paper figures
-```python
-python3 GenerateFigures
-```
-
-## Train and Test
-
-Watch out both train and testing may take a while. Testing uses multiprocesses to run the evaluation in parallel over multiple seeds.
-
-
+## Train
+Note: We provide the pre-trained networks and this part can be skipped.
+Run 
 ```python
 python3 Train
 ```
+To train the agents with Deep Q-leanring, Behavioral Cloning, Hierarchical Imitation Learning and Deep Option Critic.
 
+## GenerateFigures
+Run 
 ```python
 python3 Test
 ```
+and
+```python
+python3 GenerateFigures
+```
+to generate the results.
+
+
