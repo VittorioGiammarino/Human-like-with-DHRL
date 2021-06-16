@@ -370,8 +370,8 @@ def DOC_plot_and_stats(Training_DOC, DOC_evaluation, coins_location):
     # plt.ylim([-10, 10])
     plt.xlabel('x')
     plt.ylabel('y')
-    plt.title('OC agent, reward {}'.format(DOC_evaluation[best_index][3][best_traj_index]))
-    plt.savefig('Figures/FiguresOC/OC_Traj_VS_Options_traj_reward{}.eps'.format(DOC_evaluation[best_index][3][best_traj_index]), format='eps')
+    plt.title('OC agent, reward {}'.format(DOC_evaluation[best_index][0][best_traj_index]))
+    plt.savefig('Figures/FiguresOC/OC_Traj_VS_Options_traj_reward{}.eps'.format(DOC_evaluation[best_index][0][best_traj_index]), format='eps')
     plt.show()  
     
     time = np.linspace(0,480,len(DOC_evaluation[best_index][1][best_traj_index][:,0]))  
@@ -411,7 +411,7 @@ def DOC_plot_and_stats(Training_DOC, DOC_evaluation, coins_location):
     plt.show() 
     
     episodes = np.arange(0,len(Training_DOC))
-    z = np.polyfit(episodes, Training_DOC,10)
+    z = np.polyfit(episodes, Training_DOC, 10)
     p = np.poly1d(z)
     plt.plot(episodes, p(episodes), 'g', label = 'OC agent')
     plt.xlabel('Episode')

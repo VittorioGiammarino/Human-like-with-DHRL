@@ -62,8 +62,8 @@ def evaluate(seed, coins_location, NEpisodes, initial_state, net_weights, length
     reward_per_episode, traj, network_weights = agent_NN_Q_learning.Evaluation(NEpisodes, initial_state, seed, length_episode)
     return reward_per_episode, traj, network_weights
 
-NEpisodes = 10
-length_episode = 12000
+NEpisodes = 100
+length_episode = 6000
 pool = MyPool(Nseed)
 args = [(seed, coins_location, NEpisodes, s0, DQN, length_episode) for seed in range(Nseed)]
 print("running for {} seeds".format(Nseed))

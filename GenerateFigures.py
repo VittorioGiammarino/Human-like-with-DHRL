@@ -29,7 +29,7 @@ with open('Data_and_models/RL_algorithms/DeepQ_Learning/Q_learning_evaluation.np
 
 Rand_traj=Rand_traj%10
 coins_location = coins_location_eval[Rand_traj,:,:]
-Plot.DQN_plot_and_stats(Training_DQN, DQN_Evaluation, coins_location)
+Plot.DQN_plot_and_stats(Training_DQN[0][0], DQN_Evaluation, coins_location)
 
 # Behavioral Cloning
 with open('Data_and_models/Results_main/BC_from_human_evaluation_results.npy', 'rb') as f:
