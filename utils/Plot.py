@@ -429,7 +429,26 @@ def DOC_plot_and_stats(Training_DOC, DOC_evaluation, coins_location):
     print('DOC average reward = {}'.format(OCAve))
     print('DOC standard deviation = {}'.format(STDOC))
     print('DOC best trajectory reward = {}'.format(MAXOC))
-    print('DOC worst trajectory reward = {}'.format(MINOC))        
+    print('DOC worst trajectory reward = {}'.format(MINOC))      
+    
+def DOC_DQN_comparison(Training_DOC, Training_DQN):
+    
+    episodes1 = np.arange(0,len(Training_DQN))
+    z1 = np.polyfit(episodes1, Training_DQN, 10)
+    p1 = np.poly1d(z1)
+    plt.plot(episodes1,p1(episodes1), 'r', label = 'DQN agent')
+    episodes = np.arange(0,len(Training_DOC))
+    z = np.polyfit(episodes, Training_DOC, 10)
+    p = np.poly1d(z)
+    plt.plot(episodes, p(episodes), 'g', label = 'DOC agent')
+    plt.xlabel('Episode')
+    plt.ylabel('Reward')
+    plt.title('DQN-DOC Training Comparison')
+    plt.legend()
+    plt.savefig('Figures/DQN_DOC_training_trend_smoothed.eps', format='eps')
+    plt.show() 
+    
+    
     
     
     

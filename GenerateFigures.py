@@ -57,4 +57,6 @@ with open('Data_and_models/RL_algorithms/Option_critic_with_DQN/DeepSoftOC_learn
     DOC_evaluation = np.load(f, allow_pickle=True).tolist()
     
 Plot.DOC_plot_and_stats(Training_DOC, DOC_evaluation, coins_location)
+
+Plot.DOC_DQN_comparison(Training_DOC, Training_DQN[0][0])
     
